@@ -8,7 +8,7 @@ import{
   BrowserRouter as Router,
   Routes,
   Route,
-  Link 
+  BrowserRouter,
 } from "react-router-dom";
 
 function App() {
@@ -63,13 +63,13 @@ function App() {
 
   return (
     <>
-    <Router>
+    <Router basename='/TextUtilsApp'>
     <Navbar title="Sarfraz" mode ={mode} toggleMode={toggleMode} toggleText = {text} toggleGreen={toggleGreen} toggleGreenText = {green}/>
     <Alert alert={alert}/>
     <div className="container my-3">
       <Routes>
-        <Route path='/about' element={<About/>}/>
-        <Route path='/' element={<TextForm btnType={btn} showAlert={showAlert} heading="Enter the text to analyze" mode={mode}/>}/>
+        <Route path='/About' element={<About/>}/>
+        <Route exact path='/' element={<TextForm btnType={btn} showAlert={showAlert} heading="Enter the text to analyze" mode={mode}/>}/>
       </Routes> 
     </div>
     </Router>
