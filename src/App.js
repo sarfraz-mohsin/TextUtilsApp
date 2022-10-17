@@ -8,7 +8,6 @@ import{
   BrowserRouter as Router,
   Routes,
   Route,
-  BrowserRouter,
 } from "react-router-dom";
 
 function App() {
@@ -68,7 +67,7 @@ function App() {
     <Alert alert={alert}/>
     <div className="container my-3">
       <Routes>
-        <Route path='/About' element={<About/>}/>
+        <Route path='/About' element={<About mode ={mode} toggleMode={toggleMode} toggleText = {text} toggleGreen={toggleGreen} toggleGreenText = {green}/>}/>
         <Route exact path='/' element={<TextForm btnType={btn} showAlert={showAlert} heading="Enter the text to analyze" mode={mode}/>}/>
       </Routes> 
     </div>
